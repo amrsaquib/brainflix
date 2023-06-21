@@ -1,0 +1,23 @@
+.video-container {
+    &__video {
+        aspect-ratio: 16 / 9; 
+        width: 100%;    
+    }
+    @media (min-width: 768px ) {
+        padding: 0 2.25rem;
+        background-color: #000000;
+        height: 25rem;
+        display: flex;
+        justify-content: center;
+
+        &__video {
+            width: auto;
+            height: 100%;
+        }
+    }
+
+    @media (min-width: 1280px) { 
+        height: 33rem;
+    }
+
+}
