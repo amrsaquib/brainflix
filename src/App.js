@@ -2,7 +2,7 @@ import './App.scss';
 import './styles/partials/_global.scss'
 import Header from './components/Header/Header';
 import Video from './components/Video/Video'
-import videos from'./data/videos.json'
+import videos from'./data/video-details.json'
 import { useState } from 'react';
 
 
