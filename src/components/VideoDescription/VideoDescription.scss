@@ -1,0 +1,61 @@
+.video-description {
+    padding: 1rem;
+
+    &__title{
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-bottom: 1px solid #E1E1E1;
+    }
+
+    &__right {
+    }
+
+    &__body {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+    }
+
+    &__data--top {
+        padding-bottom: 1rem;
+    }
+
+    &__data--right {
+        display: flex;;
+    }
+
+    &__grey-text {
+        color: #AFAFAF;
+    }
+
+    @media (min-width: 768px ) {
+        padding: 1rem 2.25rem;
+
+        &__title{
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        &__data {
+            display: flex;
+        }
+
+        &__data--top {
+            padding-bottom: 0;
+            padding-right: 1rem;
+        }
+    }
+
+    @media (min-width: 1280px ) { 
+        margin: 0 auto;
+        
+        width: 70rem;
+    }
+}

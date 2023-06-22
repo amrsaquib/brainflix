@@ -14,4 +14,54 @@
     font-family: 'Avenir Next';
     margin: 0;
     padding: 0;
+    color: #323232;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: bold;
+
+    @media (min-width: 768px ) {
+        font-size: 33px;
+        line-height: 44px;
+    }
+}
+
+h2 {
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: bold;
+
+    @media (min-width: 768px ) {
+        font-size: 12px;
+        line-height: 20px;
+    }
+}
+
+h3 {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: bold;
+
+    @media (min-width: 768px ) {
+        font-size: 14px;
+        line-height: 22px;
+    }
+}
+
+p {
+    font-size: 13px;
+    line-height: 18px;
+    font-weight: normal;
+
+    @media (min-width: 768px ) {
+        font-size: 14px;
+        line-height: 22px;
+    }
 }
