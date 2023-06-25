@@ -13,11 +13,17 @@ console.log(videos[0])
 
 function App() {
   const [currVid, setCurrVid] = useState(videos[0])
+  const changeCurrVid = (vidId) => {
+    for (let vid of videos) {
+      if(vid.id === vidId)
+        setCurrVid(vid)
+    }
+  }
   return (
     <>
         <Header/>
         <Video thumbnail={currVid.image}/>
-        <VideoBelow currVid={currVid} videoList={videoList} />
+        <VideoBelow currVid={currVid} videoList={videoList} changeCurrVid={changeCurrVid}/>
     </>
   )
 }
