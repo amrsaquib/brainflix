@@ -1,0 +1,41 @@
+.comment {
+    display: flex;
+    border-top: 1px solid #E1E1E1;;
+    &__pfp {
+        background-color: #E1E1E1;
+        height: 2rem;
+        width: 2rem;
+        border-radius: 50%;
+        object-fit: cover;
+        position: relative;
+        top: 1rem;
+    }
+
+    &__right {
+        margin-left: 1rem;
+        width: 100%;
+    }
+
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1rem;
+    }
+
+    &__date {
+        color: #AFAFAF;
+    }
+
+    &__body {
+        margin: 0.5rem 0;
+    }
+
+    @media (min-width: 768px ) {
+        //padding: 1rem 2.25rem;
+    }
+
+    @media (min-width: 1280px ) { 
+        //margin: 0 auto;   
+        //width: 70rem;
+    }
+}

@@ -38,6 +38,12 @@
         color: #323232;
     }
 
+    &__comment-list {
+        list-style-type: none;
+        border-bottom: 1px solid #E1E1E1;
+        margin-top: 1rem;
+    }
+
     @media (min-width: 768px ) {
         padding: 1rem 2.25rem;
         &__right {
