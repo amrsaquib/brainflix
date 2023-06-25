@@ -3,10 +3,9 @@ import './styles/partials/_global.scss'
 import Header from './components/Header/Header';
 import Video from './components/Video/Video'
 import videos from'./data/video-details.json'
+import videoList from './data/videos.json'
 import { useState } from 'react';
-import VideoDescription from './components/VideoDescription/VideoDescription';
-import Comments from './components/Comments/Comments';
-import Comment from './components/Comment /Comment';
+import VideoBelow from './components/VideoBelow/VideoBelow';
 
 
 console.log(videos[0])
@@ -18,8 +17,7 @@ function App() {
     <>
         <Header/>
         <Video thumbnail={currVid.image}/>
-        <VideoDescription currVid={currVid} />
-        <Comments comments={currVid.comments}/>
+        <VideoBelow currVid={currVid} videoList={videoList} />
     </>
   )
 }

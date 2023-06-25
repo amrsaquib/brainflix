@@ -1,0 +1,12 @@
+.video-below {
+    @media (min-width: 1280px ) { 
+        width: 70rem;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+
+        &__left {
+            border-right: 1px solid #E1E1E1;;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+.video-link {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+    &__thumbnail {
+        aspect-ratio: 16/9;
+        height: 4.5rem;
+        border-radius: 4px;
+        margin-right: 1rem;
+    }
+
+    &__right {
+        display: flex;
+        flex-direction: column;
+        height: 5rem;
+        justify-content: space-evenly;
+    }
+}

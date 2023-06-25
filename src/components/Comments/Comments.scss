@@ -63,8 +63,11 @@
     }
 
     @media (min-width: 1280px ) { 
-        margin: 0 auto;
-        
-        width: 70rem;
+        margin: 0;
+        width: 40rem;
+
+        &__comment-list {
+            border-bottom: none;
+        }
     }
 }
