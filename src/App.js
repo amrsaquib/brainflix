@@ -8,9 +8,6 @@ import { useState } from 'react';
 import VideoBelow from './components/VideoBelow/VideoBelow';
 
 
-console.log(videos[0])
-
-
 function App() {
   const [currVid, setCurrVid] = useState(videos[0])
   const changeCurrVid = (vidId) => {

@@ -34,6 +34,14 @@
         background-color: #FAFAFA;
     }
 
+    &__input--error {
+        border: 1px solid red;
+    }
+
+    &__input:focus {
+        border: 1px solid #0095FF;
+    }
+
     &__input::placeholder {
         color: #323232;
     }
@@ -67,6 +75,10 @@
         width: 40rem;
         padding: 1rem 0;
         width: 100%;
+
+        &__add-comment {
+            padding-right: 2.25rem;
+        }
 
         &__comment-list {
             border-bottom: none;

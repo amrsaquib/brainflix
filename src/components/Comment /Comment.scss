@@ -37,5 +37,8 @@
     @media (min-width: 1280px ) { 
         //margin: 0 auto;   
         //width: 70rem;
+        &__right {
+            padding-right: 2.25rem;
+        }
     }
 }
