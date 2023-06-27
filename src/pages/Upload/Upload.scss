@@ -1,0 +1,36 @@
+.upload {
+    padding: 0 1rem;
+    border-top: 1px solid #E1E1E1;
+    display: flex;
+    flex-direction: column;
+    &__thumbnail {
+        width: 100%;
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        padding: 0.5rem;
+        //padding-bottom: 3rem;
+        margin-top: 4px;
+        margin-bottom: 1rem;
+        border: 1px solid #E1E1E1;
+        border-radius: 4px;
+        background-color: #FAFAFA;
+    }
+
+    &__input--description {
+        padding-bottom: 3rem;
+    }
+
+    &__cancel {
+        color: #0095FF;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 20px;
+        align-self: center;
+    }
+}

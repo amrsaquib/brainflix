@@ -1,9 +1,6 @@
 import Video from "../../components/Video/Video";
 import VideoBelow from "../../components/VideoBelow/VideoBelow";
 
-//import videos from "../../data/video-details.json";
-//import videoList from "../../data/videos.json";
-
 import axios from "axios";
 
 import { useState, useEffect } from "react";
