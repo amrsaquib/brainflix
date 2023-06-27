@@ -7,7 +7,7 @@ import { useState } from "react"
 
 
 export default function Comments({comments}) {
-    let commentList = comments.map((c) => {return (<li key={c.id}><Comment name={c.name} comment={c.comment} timestamp={c.timestamp}/></li>)})
+    let commentList = comments && comments.map((c) => {return (<li key={c.id}><Comment name={c.name} comment={c.comment} timestamp={c.timestamp}/></li>)})
 
     let [isError, setIsError] = useState(false)
 

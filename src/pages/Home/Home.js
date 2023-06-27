@@ -1,27 +1,53 @@
 import Video from "../../components/Video/Video";
 import VideoBelow from "../../components/VideoBelow/VideoBelow";
 
-import videos from "../../data/video-details.json";
-import videoList from "../../data/videos.json";
+//import videos from "../../data/video-details.json";
+//import videoList from "../../data/videos.json";
 
-import { useState } from "react";
+import axios from "axios";
+
+import { useState, useEffect } from "react";
 
 export default function Home() {
-  const [currVid, setCurrVid] = useState(videos[0]);
+  let api_key = "b76a1cf2-baa5-4f25-b8f4-ed70d2e32552";
+
+  let [videoList, setVideoList] = useState([]);
+  const [currVid, setCurrVid] = useState({});
   const changeCurrVid = (vidId) => {
-    for (let vid of videos) {
-      if (vid.id === vidId) setCurrVid(vid);
-    }
+    axios.get(`https://project-2-api.herokuapp.com/videos/${vidId}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`)
+    .then((r) => {
+      setCurrVid(r.data)
+    })
   };
 
-  return (
-    <>
-      <Video thumbnail={currVid.image} />
-      <VideoBelow
-        currVid={currVid}
-        videoList={videoList}
-        changeCurrVid={changeCurrVid}
-      />
-    </>
-  );
-}
+  useEffect(() => {
+    axios
+      .get(
+        "https://project-2-api.herokuapp.com/videos?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552"
+      )
+      .then((r) => {
+        setVideoList(r.data);
+        return axios.get(
+          `https://project-2-api.herokuapp.com/videos/${r.data[0].id}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`
+        );
+      })
+      .then((r) => {
+        setCurrVid(r.data);
+      });
+  }, []);
+
+  if(!videoList || !currVid) {
+    return (<>Loading!!!</>)
+  } else {
+    return (
+        <>
+          <Video thumbnail={currVid.image} />
+          <VideoBelow
+            currVid={currVid}
+            videoList={videoList}
+            changeCurrVid={changeCurrVid}
+          />
+        </>
+      );
+  }
+  }
