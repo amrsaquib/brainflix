@@ -3,8 +3,19 @@
     border-top: 1px solid #E1E1E1;
     display: flex;
     flex-direction: column;
+
+    &__header {
+        padding: 1.5rem 0;
+    }
+
     &__thumbnail {
         width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    &__buttons {
+        display: flex;
+        flex-direction: column;
     }
 
     &__label {
@@ -26,11 +37,45 @@
         padding-bottom: 3rem;
     }
 
+    .button {
+        margin-bottom: 1rem;
+    }
+
     &__cancel {
         color: #0095FF;
         font-weight: bold;
         font-size: 10px;
         line-height: 20px;
         align-self: center;
+    }
+
+    @media (min-width: 768px ) {
+        padding: 1rem 2.25rem;
+        &__header {
+            border-bottom: 1px solid #E1E1E1;
+        }
+
+        .label{
+            margin-top: 1rem;
+        }
+        &__thumbnail {
+            width: 50%;
+            margin-bottom: 1rem;
+        }
+
+        &__buttons {
+            flex-direction: row-reverse;
+            border-top: 1px solid #E1E1E1;
+            padding-top: 1rem;
+        }
+
+        .button {
+            margin-left: 2rem;
+        }
+    }
+
+    @media (min-width: 1280px ) { 
+        width: 70rem;
+        margin: 0 auto;
     }
 }
