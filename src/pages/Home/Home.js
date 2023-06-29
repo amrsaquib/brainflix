@@ -38,7 +38,7 @@ export default function Home() {
   } else {
     return (
         <>
-          <Video thumbnail={currVid.image} />
+          <Video currVid={currVid} />
           <VideoBelow
             currVid={currVid}
             videoList={videoList}

@@ -1,10 +1,11 @@
 import "./Video"
 import "./Video.scss"
 
-function Video(props) {
+function Video({currVid}) {
     return (
         <div className="video-container">
-            <video controls poster={props.thumbnail} className="video-container__video"></video>
+            <video controls poster={currVid.image} className="video-container__video">
+            </video>
         </div>
     )
 }
