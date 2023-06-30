@@ -1,8 +1,15 @@
+.container {
+    text-decoration: none;
+}
+
 .video-link {
     display: flex;
     align-items: center;
     width: 100%;
     margin-bottom: 0.5rem;
+    
+    
+    
     &__thumbnail {
         aspect-ratio: 16/9;
         height: 4.5rem;

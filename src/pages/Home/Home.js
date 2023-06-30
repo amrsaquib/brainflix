@@ -1,7 +1,10 @@
 import Video from "../../components/Video/Video";
 import VideoBelow from "../../components/VideoBelow/VideoBelow";
+import Header from "../../components/Header/Header";
 
 import axios from "axios";
+
+
 
 import { useState, useEffect } from "react";
 
@@ -33,11 +36,12 @@ export default function Home() {
       });
   }, []);
 
-  if(!videoList || !currVid) {
+  if(!videoList[0] || !currVid.id) {
     return (<>Loading!!!</>)
   } else {
     return (
         <>
+          <Header changeCurrVid={changeCurrVid} firstVid={videoList[0].id}/>
           <Video currVid={currVid} />
           <VideoBelow
             currVid={currVid}
