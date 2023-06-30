@@ -4,12 +4,7 @@ import Button from "../Button/Button"
 import upload from "../../assets/icons/upload.svg"
 import pfp from "../../assets/images/Mohan-muruge.jpg"
 import "./Header.scss"
-import { Link, useNavigate } from "react-router-dom"
-
-/*<Link to="/">  </ Link>*/ 
-
-
-
+import { Link} from "react-router-dom"
 
 function Header({changeCurrVid, firstVid}) {
     let clickHandler = () => {
