@@ -10,7 +10,7 @@ export default function Home() {
   const changeCurrVid = (vidId) => {
     axios
       .get(
-        `https://project-2-api.herokuapp.com/videos/${vidId}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`
+        `http://localhost:8080/videos/${vidId}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`
       )
       .then((r) => {
         setCurrVid(r.data);
@@ -20,12 +20,12 @@ export default function Home() {
   useEffect(() => {
     axios
       .get(
-        "https://project-2-api.herokuapp.com/videos?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552"
+        "http://localhost:8080/videos?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552"
       )
       .then((r) => {
         setVideoList(r.data);
         return axios.get(
-          `https://project-2-api.herokuapp.com/videos/${r.data[0].id}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`
+          `http://localhost:8080/videos/${r.data[0].id}?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552`
         );
       })
       .then((r) => {

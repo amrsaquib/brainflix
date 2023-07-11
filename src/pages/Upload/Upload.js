@@ -4,12 +4,29 @@ import icon from "../../assets/icons/upload.svg";
 import Button from "../../components/Button/Button";
 import Header from "../../components/Header/Header";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 export default function Upload() {
   let navigate = useNavigate();
-  const publish = () => {
-    alert("Success!");
-    navigate("../");
+  const publish = (e) => {
+    e.preventDefault();
+    let newVideo = {
+      title: "",
+      channel: "amr",
+      image: "http://localhost:8080/images/Upload-video-preview.jpg",
+      description: "",
+    };
+    newVideo.title = e.target.title.value;
+    newVideo.description = e.target.description.value;
+    axios
+      .post(
+        "http://localhost:8080/videos?api_key=b76a1cf2-baa5-4f25-b8f4-ed70d2e32552",
+        newVideo
+      )
+      .then((r) => {
+        alert("Success!");
+        navigate("../");
+      });
   };
 
   const cancel = () => {
@@ -33,6 +50,7 @@ export default function Upload() {
                 className="upload__input"
                 type="text"
                 placeholder="Add a title to your video"
+                name="title"
               ></input>
             </label>
             <label className="label upload__label">
@@ -41,6 +59,7 @@ export default function Upload() {
                 className="upload__input upload__input--description"
                 type="text"
                 placeholder="Add a description to your video"
+                name="description"
               ></input>
             </label>
             <div className="upload__buttons">
