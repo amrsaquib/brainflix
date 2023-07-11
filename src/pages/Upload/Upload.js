@@ -41,7 +41,7 @@ export default function Upload() {
         <div className="upload__main">
           <div className="upload__top">
             <p className="label">VIDEO THUMBNAIL</p>
-            <img src={thumbnail} className="upload__thumbnail" />
+            <img src={thumbnail} className="upload__thumbnail" alt="upload image"/>
           </div>
           <form onSubmit={publish}>
             <label className="label upload__label">

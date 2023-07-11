@@ -15,7 +15,7 @@ function Header({changeCurrVid, firstVid}) {
     }
     return (
         <header className="header">
-            <Link to={`/`}><img className="header__logo" src={logo} onClick={clickHandler}/> </ Link>
+            <Link to={`/`}><img className="header__logo" src={logo} alt="logo"onClick={clickHandler}/> </ Link>
             <div className="header__functionality">
                 <div className="header__mobile-search"> 
                     <label className="header__searchbar">

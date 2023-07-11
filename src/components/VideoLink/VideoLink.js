@@ -15,7 +15,7 @@ export default function VideoLink({
   return (
     <Link className="container" to={`../${id}`}>
       <div className="video-link" onClick={clickHandler}>
-        <img className="video-link__thumbnail" src={image} />
+        <img className="video-link__thumbnail" src={image} alt="video thumbnail"/>
         <div className="video-link__right">
           <h3 className="video-link__title">{title}</h3>
           <p>{channel}</p>

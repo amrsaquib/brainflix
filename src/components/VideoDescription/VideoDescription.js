@@ -15,11 +15,11 @@ function VideoDescription(props) {
                 </div>
                 <div className="video-description__data video-description__right">
                     <div className="video-description__data video-description__data--right video-description__data--top">
-                        <img src={view}/>
+                        <img src={view} alt="views"/>
                         <p className="video-description__grey-text">{props.currVid.views}</p>
                     </div>
                     <div className="video-description__data video-description__data--right">
-                        <img src={like}/>
+                        <img src={like} alt="likes"/>
                         <p className="video-description__grey-text">{props.currVid.likes}</p>
                     </div>
                 </div>
